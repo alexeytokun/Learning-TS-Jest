@@ -4,4 +4,7 @@ export type INCREMENT_ENTHUSIASM = typeof INCREMENT_ENTHUSIASM;
 export const DECREMENT_ENTHUSIASM = 'DECREMENT_ENTHUSIASM';
 export type DECREMENT_ENTHUSIASM = typeof DECREMENT_ENTHUSIASM;
 
+export const SET_RANDOM_NAME = 'SET_RANDOM_NAME';
+export type SET_RANDOM_NAME = typeof SET_RANDOM_NAME;
+
 export const API_URL = 'https://randomuser.me/api/?inc=name';

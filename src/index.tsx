@@ -2,14 +2,14 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { createStore } from 'redux';
-import { EnthusiasmAction } from './actions/';
+import { Actions } from './actions/';
 import Hello from './containers/Hello';
 import './index.css';
 import { enthusiasm } from './reducers';
 import registerServiceWorker from './registerServiceWorker';
 import { StoreState } from './types';
 
-const store = createStore<StoreState, EnthusiasmAction, any, any>(enthusiasm);
+const store = createStore<StoreState, Actions, any, any>(enthusiasm);
 
 
 ReactDOM.render(

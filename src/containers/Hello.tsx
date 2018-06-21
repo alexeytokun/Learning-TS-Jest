@@ -10,10 +10,11 @@ export function mapStateToProps({ enthusiasmLevel, languageName }: StoreState) {
     }
 }
 
-export function mapDispatchToProps(dispatch: Dispatch<actions.EnthusiasmAction>) {
+export function mapDispatchToProps(dispatch: Dispatch<actions.Actions>) {
     return {
         onDecrement: () => dispatch(actions.decrementEnthusiasm()),
         onIncrement: () => dispatch(actions.incrementEnthusiasm()),
+        setRandomName: (name: string) => dispatch(actions.setRandomName(name)),
     }
 }
 

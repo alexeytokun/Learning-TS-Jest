@@ -7,6 +7,7 @@ export interface Props {
     enthusiasmLevel?: number;
     onIncrement?: () => void;
     onDecrement?: () => void;
+    setRandomName?: (name: string) => void;
 }
 
 // function Hello({name, enthusiasmLevel = 1, onIncrement, onDecrement}: Props) {
@@ -52,8 +53,8 @@ class Hello extends React.Component<Props, object> {
     }
 
     private handleSetName = (name: string) => {
-        console.log(name);
-        return name;
+        const { setRandomName } = this.props;
+        if (setRandomName) { setRandomName(name) }
     }
 }
 
