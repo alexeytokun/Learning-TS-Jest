@@ -23,6 +23,11 @@ describe('reducer enthusiasm', () => {
             .toEqual({ enthusiasmLevel: 2, languageName: 'JS' })
     });
 
+    it('should handle SET_RANDOM_NAME', () => {
+        expect(enthusiasm(testStore, actions.setRandomName('test')))
+            .toEqual({ enthusiasmLevel: 3, languageName: 'test' })
+    });
+
     it('should handle wrong action type', () => {
         expect(enthusiasm(testStore, { type: 'TEST' } as any))
             .toEqual({ enthusiasmLevel: 3, languageName: 'JS' })

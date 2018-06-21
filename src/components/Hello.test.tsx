@@ -8,24 +8,24 @@ it('renders the correct text when no enthusiasm level is given', () => {
     expect(hello.find(".greeting").text()).toEqual('Hello Daniel!')
 });
 
- it('renders the correct text with an explicit enthusiasm of 1', () => {
-     const hello = shallow(<Hello name='Daniel' enthusiasmLevel={1}/>);
-     expect(hello.find(".greeting").text()).toEqual('Hello Daniel!')
- });
+it('renders the correct text with an explicit enthusiasm of 1', () => {
+    const hello = shallow(<Hello name='Daniel' enthusiasmLevel={1}/>);
+    expect(hello.find(".greeting").text()).toEqual('Hello Daniel!')
+});
 
- it('renders the correct code with explicit enthusiasm level of 5', () => {
+it('renders the correct code with explicit enthusiasm level of 5', () => {
     const hello = shallow(<Hello name='Daniel' enthusiasmLevel={5} />);
     expect(hello.find(".greeting").text()).toEqual('Hello Daniel!!!!!')
- });
+});
 
- it('throws when the enthusiasm level is 0', () => {
+it('throws when the enthusiasm level is 0', () => {
     expect(() => {
         shallow(<Hello name='Daniel' enthusiasmLevel={0}/>)
     }).toThrow();
- });
+});
 
- it('throws when the enthusiasm level is negative', () => {
+it('throws when the enthusiasm level is negative', () => {
     expect(() => {
         shallow(<Hello name='Daniel' enthusiasmLevel={-1}/>)
     }).toThrow();
- });
+});

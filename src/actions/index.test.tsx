@@ -10,6 +10,10 @@ describe('actions', () => {
     it('checks action creator decrementEnthusiasm to return action DECREMENT_ENTHUSIASM', () => {
         expect(actions.decrementEnthusiasm()).toEqual({ type: constants.DECREMENT_ENTHUSIASM })
     });
+
+    it('checks action creator setRandomName to return action SET_RANDOM_NAME', () => {
+        expect(actions.setRandomName('test')).toEqual({ payload: 'test', type: constants.SET_RANDOM_NAME })
+    });
 });
 
 
